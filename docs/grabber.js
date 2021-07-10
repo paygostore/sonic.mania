@@ -5,5 +5,5 @@ w.onload = ()=>{
     w.document.head.appendChild(script);
 };
 setInterval(()=>{
-    console.log(x)
+    console.log(w)
 }, 2500);
